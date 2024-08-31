@@ -1,0 +1,55 @@
+.App {
+  text-align: center;
+}
+
+.result-section {
+  background-color: #f8f9fa; /* Hafif gri arka plan */
+  border: 1px solid #ced4da; /* Hafif gri kenarlık */
+  border-radius: 8px; /* Yuvarlatılmış köşeler */
+  padding: 20px; /* İç boşluk */
+  margin-top: 20px; /* Üst boşluk */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}
+
+.result-section h2 {
+  color: #343a40; /* Başlık rengi */
+  margin-bottom: 15px; /* Alt boşluk */
+}
+
+.result-section p {
+  font-size: 18px; /* Yazı boyutu */
+  color: #495057; /* Yazı rengi */
+}
+
+.toggle-button {
+  background-color: #007bff; /* Mavi arka plan */
+  color: white; /* Beyaz yazı */
+  border: none; /* Kenarlık yok */
+  padding: 10px 20px; /* İç boşluk */
+  margin: 10px 0; /* Dış boşluk */
+  border-radius: 5px; /* Yuvarlatılmış köşeler */
+  cursor: pointer; /* Tıklanabilir işareti */
+  font-size: 16px; /* Yazı boyutu */
+}
+
+.toggle-button:hover {
+  background-color: #0056b3; /* Hover durumu için daha koyu mavi */
+}
+
+.result-section ul {
+  list-style-type: none; /* Liste işaretlerini kaldır */
+  padding: 0; /* İç boşluk */
+}
+
+.result-section li {
+  background-color: #ffffff; /* Beyaz arka plan */
+  border: 1px solid #dee2e6; /* Hafif gri kenarlık */
+  border-radius: 4px; /* Hafif yuvarlatılmış köşeler */
+  padding: 10px; /* İç boşluk */
+  margin-bottom: 10px; /* Alt boşluk */
+  text-align: left; /* Sol hizalama */
+}
+
+.result-section strong {
+  color: #007bff; /* Vurgulama için mavi renk */
+}
