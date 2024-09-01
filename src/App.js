@@ -39,7 +39,7 @@ const App = () => {
 
   // Zamanlayıcıyı yöneten ve sorunun süresi dolduğunda sonraki soruya geçen useEffect
   useEffect(() => {
-    console.log(questions); // Soruların doğru yüklendiğini kontrol etmek için
+    //console.log(questions); // Soruların doğru yüklendiğini kontrol etmek için
     if (currentQuestionIndex !== null && timeLeft > 0) {
       const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000); // Her saniye zamanı bir azalt
       return () => clearTimeout(timer); // Temizlik işlemi

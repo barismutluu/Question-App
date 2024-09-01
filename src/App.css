@@ -1,55 +1,88 @@
+body {
+  font-family: "Arial", sans-serif; /* Sayfanın genel yazı tipi Arial olarak ayarlanır, yedek olarak sans-serif kullanılır */
+  background-color: #f0f2f5; /* Sayfanın genel arka plan rengi, açık gri */
+  margin: 0; /* Body elemanının dış kenar boşlukları kaldırılır */
+  padding: 0; /* Body elemanının iç kenar boşlukları kaldırılır */
+  display: flex; /* Flexbox modeli kullanılır, bu sayede içerikler merkezlenebilir */
+  justify-content: center; /* İçerikleri yatayda ortalar */
+  align-items: center; /* İçerikleri dikeyde ortalar */
+  min-height: 100vh; /* Sayfanın minimum yüksekliği, tam ekran yüksekliği olacak şekilde ayarlanır */
+}
+
 .App {
-  text-align: center;
+  text-align: center; /* Metinlerin ortalanmasını sağlar */
+  width: 80%; /* Elemanın genişliği, tarayıcı genişliğinin %80'i kadar olur */
+  max-width: 1400px; /* Maksimum genişlik 1400 piksel olarak sınırlandırılır */
+  padding: 20px; /* Elemanın iç kenar boşlukları, içerikten 20 piksel uzaklaşır */
+  background-color: #f8f9fa; /* Hafif gri bir arka plan rengi */
+  border: 1px solid #ced4da; /* Elemanın etrafında hafif gri bir kenarlık */
+  border-radius: 10px; /* Köşeler yuvarlatılarak, daha yumuşak bir görünüm sağlanır */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Elemanın etrafına hafif bir gölge efekti ekler */
+  margin: 20px auto; /* Dış boşluk, üstten ve alttan 20 piksel, yanlardan otomatik ortalama sağlar */
 }
 
-.result-section {
-  background-color: #f8f9fa; /* Hafif gri arka plan */
-  border: 1px solid #ced4da; /* Hafif gri kenarlık */
-  border-radius: 8px; /* Yuvarlatılmış köşeler */
-  padding: 20px; /* İç boşluk */
-  margin-top: 20px; /* Üst boşluk */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+h1,
+h2 {
+  color: #343a40; /* Başlıkların rengi koyu gri */
+  margin-bottom: 15px; /* Başlıklar ile sonraki içerik arasında 15 piksel boşluk bırakır */
 }
 
-.result-section h2 {
-  color: #343a40; /* Başlık rengi */
-  margin-bottom: 15px; /* Alt boşluk */
+p {
+  font-size: 18px; /* Paragrafların yazı boyutu 18 piksel */
+  color: #495057; /* Paragrafların yazı rengi, koyu gri */
+  margin-bottom: 15px; /* Paragraflar ile sonraki içerik arasında 15 piksel boşluk bırakır */
 }
 
-.result-section p {
-  font-size: 18px; /* Yazı boyutu */
-  color: #495057; /* Yazı rengi */
+button {
+  background-color: #007bff; /* Butonların arka plan rengi, mavi */
+  color: white; /* Butonların yazı rengi, beyaz */
+  border: none; /* Butonların kenarlığı kaldırılır */
+  padding: 10px 20px; /* Butonların iç kenar boşlukları: yukarıdan ve aşağıdan 10 piksel, yanlardan 20 piksel */
+  margin: 10px 5px; /* Butonların etrafında 10 piksel üst/alt, 5 piksel sağ/sol boşluk bırakılır */
+  border-radius: 5px; /* Buton köşeleri hafifçe yuvarlatılır */
+  cursor: pointer; /* Butonların üzerine gelindiğinde imleç, el simgesine dönüşür */
+  font-size: 16px; /* Buton yazı boyutu 16 piksel */
+  transition: background-color 0.3s ease; /* Arka plan renginin değişiminde 0.3 saniyelik yumuşak bir geçiş efekti uygulanır */
 }
 
-.toggle-button {
-  background-color: #007bff; /* Mavi arka plan */
-  color: white; /* Beyaz yazı */
-  border: none; /* Kenarlık yok */
-  padding: 10px 20px; /* İç boşluk */
-  margin: 10px 0; /* Dış boşluk */
-  border-radius: 5px; /* Yuvarlatılmış köşeler */
-  cursor: pointer; /* Tıklanabilir işareti */
-  font-size: 16px; /* Yazı boyutu */
+button:hover {
+  background-color: #0056b3; /* Butonun üzerine gelindiğinde arka plan rengi koyu maviye döner */
 }
 
-.toggle-button:hover {
-  background-color: #0056b3; /* Hover durumu için daha koyu mavi */
+.options-section {
+  display: flex; /* Flexbox modelini kullanarak seçenekleri yatay sıralar */
+  flex-wrap: wrap; /* Eğer seçenekler sığmazsa, bir alt satıra geçmelerini sağlar */
+  justify-content: center; /* Seçenekleri yatayda ortalar */
+  gap: 10px; /* Seçenekler arasında 10 piksel boşluk bırakır */
 }
 
-.result-section ul {
-  list-style-type: none; /* Liste işaretlerini kaldır */
-  padding: 0; /* İç boşluk */
+.timer-section {
+  font-size: 18px; /* Zamanlayıcı yazı boyutu 18 piksel */
+  color: #ff0000; /* Zamanlayıcı yazı rengi kırmızı, dikkat çekmek için */
+  margin-top: 10px; /* Üstten 10 piksel boşluk bırakır */
 }
 
-.result-section li {
-  background-color: #ffffff; /* Beyaz arka plan */
-  border: 1px solid #dee2e6; /* Hafif gri kenarlık */
-  border-radius: 4px; /* Hafif yuvarlatılmış köşeler */
-  padding: 10px; /* İç boşluk */
-  margin-bottom: 10px; /* Alt boşluk */
-  text-align: left; /* Sol hizalama */
+ul {
+  list-style-type: none; /* Liste işaretlerini kaldırır */
+  padding: 0; /* Liste elemanlarının iç kenar boşluklarını kaldırır */
 }
 
-.result-section strong {
-  color: #007bff; /* Vurgulama için mavi renk */
+li {
+  background-color: #f0f2f5; /* Liste elemanlarının arka plan rengi açık gri */
+  border: 1px solid #dee2e6; /* Hafif gri bir kenarlık */
+  border-radius: 4px; /* Köşeler hafifçe yuvarlatılır */
+  padding: 10px; /* İçerikten 10 piksel uzaklaşan iç kenar boşlukları */
+  margin-bottom: 10px; /* Her liste elemanı arasında 10 piksel boşluk bırakır */
+  text-align: left; /* Metinlerin sola hizalanmasını sağlar */
+}
+
+strong {
+  color: #007bff; /* Kalın metinlerin rengi mavi */
+}
+
+img {
+  max-width: 100%; /* Resmin maksimum genişliği, kapsayıcısının genişliği kadar olur */
+  height: auto; /* Resmin yüksekliği, genişliğiyle orantılı olarak ayarlanır */
+  border-radius: 8px; /* Resmin köşeleri yuvarlatılır */
+  margin-top: 10px; /* Resmin üst tarafında 10 piksel boşluk bırakılır */
 }
